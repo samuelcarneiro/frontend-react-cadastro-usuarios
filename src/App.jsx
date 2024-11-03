@@ -1,10 +1,19 @@
-function App() {
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import Cadastro from './pages/Cadastro';
+import Login from './pages/Login'
 
+function App() {
   return (
     <div>
-      <h1>Cadastro React</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Cadastro />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/listar" element={<Cadastro />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
